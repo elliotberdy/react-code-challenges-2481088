@@ -19,8 +19,10 @@ const colors = [{
 
 export default function ColorRenderer () {
   return (
-    {colors.map((hex, name) => (
-      <Color hex={hex} name={name} />
-    ))}
+    <div>
+      {colors.map((color) => (
+        <Color key={color.name} hex={color.hex} name={color.name} />
+      ))}
+    </div>
   );
 };
